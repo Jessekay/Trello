@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import List from './List'
 export default function Board() {
   const boardLists = [

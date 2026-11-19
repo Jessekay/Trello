@@ -31,16 +31,15 @@ export default function Header() {
 
         <a href="/" className="flex items-center gap-2 rounded px-1 py-1 hover:bg-white/10">
           <span className="flex h-6 w-6 items-center justify-center rounded bg-[#b6c2cf]">
-            <span className="flex h-4 w-4 items-start gap-[2px] p-[2px]">
-              <span className="h-full w-[5px] rounded-[1px] bg-[#1d2125]" />
-              <span className="h-2/3 w-[5px] rounded-[1px] bg-[#1d2125]" />
+            <span className="flex h-4 w-4 items-start gap-0.5 p-0.5">
+              <span className="h-full w-1.25 rounded-[1px] bg-[#1d2125]" />
+              <span className="h-2/3 w-1.25 rounded-[1px] bg-[#1d2125]" />
             </span>
           </span>
           <span className="text-lg font-bold text-[#9fadbc]">Trello</span>
         </a>
       </div>
 
-      {/* Center: search + create */}
       <div className="flex items-center gap-2">
         <div className="relative w-[min(780px,50vw)]">
           <Search
@@ -70,7 +69,6 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Right: actions + avatar */}
       <div className="flex items-center justify-end gap-1">
         <IconButton label="Notices">
           <Megaphone size={18} />
