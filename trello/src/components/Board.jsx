@@ -31,7 +31,7 @@ export default function Board() {
   }
 
   return (
-    <div className='flex items-start gap-3 overflow-x-auto p-3'>
+    <div className='flex items-start gap-3 overflow-x-auto p-3 h-screen'>
       {listItem}
       <div className='flex justify-center font-medium bg-blue-400 text-white p-2 rounded-2xl w-[20%] min-w-48 max-w-64'>
         <button onClick={handleOnclick}>+ Add another list</button>

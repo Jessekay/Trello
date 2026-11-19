@@ -6,7 +6,7 @@ import bg from "./assets/bg.png";
 export default function App() {
   return (
     <div
-      className="flex min-h-screen flex-col bg-cover bg-center bg-no-repeat"
+      className="flex flex-col bg-cover bg-center bg-no-repeat h-screen"
       style={{ backgroundImage: `url(${bg})` }}
     >
       <Header />
