@@ -9,19 +9,22 @@ export default function List({ title, cards }) {
       setIsEdit(false)
     }
   }
+  const handleOnclick = () => setIsEdit(true)
+  const handleOnBlur = () => setIsEdit(false)
+  const handleOnchange = (e) => setListTitle(e.target.value)
   return (
     <div className="w-68 shrink-0 rounded-xl bg-[#101204] p-2 text-[#b6c2cf]">
       <h2 className="px-2 py-1 text-sm font-semibold">
         {isEdit ? (
-          <input 
+          <input
             type="text"
-            value={listTitle} 
-            onChange={(e) => setListTitle(e.target.value)} 
-            onBlur={() => setIsEdit(false)} 
+            value={listTitle}
+            onChange={handleOnchange}
+            onBlur={handleOnBlur}
             onKeyDown={handleKeyDown}
           />
         ) : (
-          <span onClick={() => setIsEdit(true)}>{listTitle}</span>
+          <span onClick={handleOnclick}>{listTitle}</span>
         )}
       </h2>
       {cards.map((card) => (
