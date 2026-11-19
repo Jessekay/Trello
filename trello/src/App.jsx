@@ -1,5 +1,6 @@
 import Header from "./components/Header.jsx";
 import SubHeader from "./components/SubHeader.jsx";
+import Board from "./components/Board.jsx";
 import bg from "./assets/bg.png";
 
 export default function App() {
@@ -10,6 +11,8 @@ export default function App() {
     >
       <Header />
       <SubHeader />
+      <Board />
+
     </div>
   );
 }
