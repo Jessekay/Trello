@@ -1,14 +1,7 @@
-import { useState } from 'react'
-export default function Card() {
-
-  // const [cardItem, setCardItem] = useState([])
-
-  // setCardItem(() => {
-  //   (prevCard => !prevCard)
-  // })
+export default function Card({ text }) {
   return (
-    <>
-    <h1>cards goes here</h1>
-    </>
-  )
+    <div className="mt-2 rounded-lg bg-[#22272b] px-3 py-2 text-sm">
+      {text}
+    </div>
+  );
 }

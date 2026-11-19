@@ -3,9 +3,26 @@ import List from './List'
 export default function Board() {
   const [boardLists, setBoardLists] = useState([])
 
+  const handleAddCard = (listId, text) => {
+    const newCard = {id:crypto.randomUUID(), text:text}
+    setBoardLists((prev) => {
+      return prev.map((list) => {
+        if (list.id === listId) {
+          return {...list, cards:[...list.cards, newCard]}
+        }
+        return list
+      })
+  })
+  }
 
   const listItem = boardLists.map(list => (
-    <List key={list.id} title={list.title} cards={list.cards}/>
+    <List 
+    key={list.id}
+    id={list.id} 
+    title={list.title} 
+    cards={list.cards}
+    onAddCard={handleAddCard}
+    />
   ))
 
   const handleOnclick = () => {
@@ -16,7 +33,7 @@ export default function Board() {
   return (
     <div className='flex items-start gap-3 overflow-x-auto p-3'>
       {listItem}
-      <div className='flex justify-center text-1xl bg-amber-50 text-black p-2 rounded-2xl w-[20%] min-w-48 max-w-64'>
+      <div className='flex justify-center font-medium bg-blue-400 text-white p-2 rounded-2xl w-[20%] min-w-48 max-w-64'>
         <button onClick={handleOnclick}>+ Add another list</button>
       </div>
     </div>
