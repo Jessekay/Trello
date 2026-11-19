@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import List from './List'
 export default function Board() {
   const boardLists = [
@@ -20,6 +19,7 @@ export default function Board() {
   const listItem = boardLists.map(list => (
     <List key={list.id} title={list.title} cards={list.cards}/>
   ))
+
 
   return (
     <div className='flex items-start gap-3 overflow-x-auto p-3'>

@@ -21,7 +21,7 @@ export default function List({ title, cards }) {
             onKeyDown={handleKeyDown}
           />
         ) : (
-          <h1 onClick={() => setIsEdit(true)}>{title}</h1>
+          <span onClick={() => setIsEdit(true)}>{listTitle}</span>
         )}
       </h2>
       {cards.map((card) => (
